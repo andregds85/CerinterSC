@@ -23,6 +23,7 @@ use App\Http\Controllers\PainelController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\BuscaUsuarioController;
 use App\Http\Controllers\ChecklistControllerPDFS;
+use App\Http\Controllers\TaxaController;
 
 
 
@@ -54,6 +55,8 @@ Route::group(['middleware' => ['auth']], function() {
 
  
     Route::resource('sucesso', MonitoramentoController::class);
+    Route::resource('taxa', TaxaController::class);
+
     Route::resource('aerio', aerioController::class);
     Route::resource('apaga', apagaController::class);
     Route::resource('temporeal', tempoRealController::class);
