@@ -7,6 +7,8 @@
 <li><a class="nav-link" href="{{ url('/apaga') }}">Zerar monitoramento</a></li>
 <li><a class="nav-link" href="{{ url('/temporeal') }}">Solicitações em Tempo Real</a></li>
 <li><a class="nav-link" href="{{ url('/painel') }}">Painel</a></li>
+<li><a class="nav-link" href="{{ url('/taxa') }}">Ocupação de Leitos</a></li>
+
 <li><a class="nav-link" href="http://cerintersc.com.br/downloadApp/CerinterSC_App.apk">APP para Android</a></li>
 
 

@@ -687,6 +687,7 @@ class ComposerStaticInitad427575ce04c5c654559c701f2d00a8
         'App\\Http\\Controllers\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/RoleController.php',
         'App\\Http\\Controllers\\SEOController' => __DIR__ . '/../..' . '/app/Http/Controllers/SEOController.php',
         'App\\Http\\Controllers\\SolicitanteController' => __DIR__ . '/../..' . '/app/Http/Controllers/SolicitanteController.php',
+        'App\\Http\\Controllers\\TaxaController' => __DIR__ . '/../..' . '/app/Http/Controllers/TaxaController.php',
         'App\\Http\\Controllers\\TerrestreController' => __DIR__ . '/../..' . '/app/Http/Controllers/TerrestreController.php',
         'App\\Http\\Controllers\\TerrestreControllerPDF' => __DIR__ . '/../..' . '/app/Http/Controllers/TerrestreControllerPDF.php',
         'App\\Http\\Controllers\\TerrestreControlleradm' => __DIR__ . '/../..' . '/app/Http/Controllers/TerrestreControlleradm.php',

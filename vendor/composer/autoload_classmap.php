@@ -33,6 +33,7 @@ return array(
     'App\\Http\\Controllers\\RoleController' => $baseDir . '/app/Http/Controllers/RoleController.php',
     'App\\Http\\Controllers\\SEOController' => $baseDir . '/app/Http/Controllers/SEOController.php',
     'App\\Http\\Controllers\\SolicitanteController' => $baseDir . '/app/Http/Controllers/SolicitanteController.php',
+    'App\\Http\\Controllers\\TaxaController' => $baseDir . '/app/Http/Controllers/TaxaController.php',
     'App\\Http\\Controllers\\TerrestreController' => $baseDir . '/app/Http/Controllers/TerrestreController.php',
     'App\\Http\\Controllers\\TerrestreControllerPDF' => $baseDir . '/app/Http/Controllers/TerrestreControllerPDF.php',
     'App\\Http\\Controllers\\TerrestreControlleradm' => $baseDir . '/app/Http/Controllers/TerrestreControlleradm.php',
