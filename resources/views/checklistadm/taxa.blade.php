@@ -77,9 +77,6 @@ print_r($response);
 $hosp=(explode(',', $response)); 
 ?>
     
-     
-
-
 
 <div class="container">
 <ul class="collapsible">
@@ -2308,16 +2305,19 @@ for ($x = 2068; $x <= 2078; $x++) {
 ?>
 </tr>
 
-
-
-</tbody>
-</table>
-  </div>
+</div>
   </li>
 </ul>
 </div>
 
-</div>
+<!-- Encerra o Bloco -->
+
+
+
+
+
+
+
 
 
   <footer class="page-footer orange">
