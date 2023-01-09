@@ -8,6 +8,8 @@
 <li><a class="nav-link" href="{{ url('/temporeal') }}">Solicitações em Tempo Real</a></li>
 <li><a class="nav-link" href="{{ url('/painel') }}">Painel</a></li>
 <li><a class="nav-link" href="{{ url('/taxa') }}">Ocupação de Leitos</a></li>
+<li><a class="nav-link" href="{{ url('/ocupacaopdf') }}">Ocupação de Leitos / PDF</a></li>
+
 <li><a class="nav-link" href="{{ url('/cnes') }}">Hospitais / Dados Cnes  </a></li>
 
 <li><a class="nav-link" href="http://cerintersc.com.br/downloadApp/CerinterSC_App.apk">APP para Android</a></li>

@@ -12,7 +12,6 @@ php artisan make:seeder CreateAdminUserSeeder
 
 php artisan db:seed --class=CreateAdminUserSeeder
 
-
 Criar uma Model e Migrations
 php artisan make:model nome da Model -m
 
@@ -20,7 +19,6 @@ php artisan make:model nome da Model -m
 Criar um Controller
 php artisan make:controller PostController --resource
 php artisan make:controller ManualController --resource
-
 
 Criando um modulo
 https://www.diegobrocanelli.com.br/php/laravel-module/

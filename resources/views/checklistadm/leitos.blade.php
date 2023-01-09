@@ -1,64 +1,44 @@
-@extends('especial.app')
-@section('content')
-<?php 
-use App\Http\Controllers\TaxaController;
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>CerinterSC</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
+
+
+
+
+    <!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  </head>
 <body>
-
-<nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="http://www.cerintersc.com.br" class="brand-logo">CerinterSC</a>
-      <ul class="right hide-on-med-and-down">
-    
-        <li><a href="http://www.cerintersc.com.br">Inicio</a></li>   
-     
-      </ul>
-      <ul id="nav-mobile" class="sidenav">
-      <li><a href="http://www.cerintersc.com.br">Inicio</a></li>   
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-
-
-
-
-<div class="container">
-<ul class="collapsible">
-  <li>
-    <div class="collapsible-header">
-      <i class="material-icons">people</i>
-      {{ Auth::user()->name}}
-      <span class="new badge"></span></div>
-    <div class="collapsible-body"><p>{{ Auth::user()->email}}</p>
-   <p>{{ Auth::user()->id}}</p>
-  </div>
-  </li>
-</ul>
-</div>
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+    <td>
+    <img src="http://www.cerintersc.com.br/content/img/logo.png" width="100" height="100"> 
+</td>
+      <td align="center"><b>
+      <br>Estado de Santa Catarina
+      <br>Secretaria de Estado da Saúde 
+      <br>Central Estadual de Serviços Especializado e Regulação
+      <br>Central Estadual de Transferência Inter Hospitalares
+      <br>Ocupação de Leitos do Sistema SES Leitos<br>
+      Dados dos Hospitais </b>
+     </td>
+     </tr>
+  </tbody>
+</table>
 
 
-      <h1 class="header center orange-text">Ocupação de Leitos</h1>
-      <div class="row center">
-        <h5 class="header col s12 light"> Covid e não Covid<p> UTI e Enfermaria</p></h5>
-
-      </div>
-
-      <br><br>
-    </div>
-  </div>
 
 
-<?php
+
+
+
+     <?php
 $curlHandler = curl_init();
 $token = '';
 curl_setopt_array($curlHandler, [
@@ -77,26 +57,13 @@ print_r($response);
 $hosp=(explode(',', $response)); 
 ?>
     
+<table>
 
-<div class="container">
-<ul class="collapsible">
-  <li>
-    <div class="collapsible-header">
-      <i class="material-icons">place</i>
- Ocupação de Leitos Uti e Enfermaria (Covid e Não Covid)
-     </div>
-    <div class="collapsible-body">
-    <form>
-   <input type="button" value="Imprimir" onClick="window.print()" />
-</form>
+ 
 
-
-    <table class="responsive-table">
 <thead>
 
-
 <tr>
-
 
 
 <?php
@@ -2314,38 +2281,40 @@ for ($x = 2068; $x <= 2078; $x++) {
 ?>
 </tr>
 
-</div>
-  </li>
-</ul>
-</div>
+      </td>
+   </tr>
+  </tbody>
+</table>
 
-<!-- Encerra o Bloco -->
+<table class="table table-bordered">
+  <tbody>
+  <tr>
+      </td>
+    </tr>
+  </tbody>
+</table> 
 
 
 
 
 
-
-
-
-  <footer class="page-footer orange">
-    <div class="container">
-    <div class="footer-copyright">
-      <div class="container">
-       <a class="orange-text text-lighten-3" href="http://cerintersc.com.br">CerinterSC</a>
-      </div>
-    </div>
-    </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <script src="../js/init.js"></script>
-    <script src="../js/materialize.js"></script>
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
-</html>
+
+ 
+
+    </html>
 
 
 
-@endsection
+
+
+
+
+
+
+ 

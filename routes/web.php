@@ -25,8 +25,7 @@ use App\Http\Controllers\BuscaUsuarioController;
 use App\Http\Controllers\ChecklistControllerPDFS;
 use App\Http\Controllers\TaxaController;
 use App\Http\Controllers\CnesController;
-
-
+use App\Http\Controllers\OcupacaoControllerPDF;
 
 
 
@@ -66,7 +65,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('checklistpdf/{id}', [ChecklistControllerPDF::class, 'index']); 
     Route::get('checklistpdfs/{id}', [ChecklistControllerPDFS::class, 'index']); 
 
- 
+
+
+    Route::get('ocupacaopdf', [OcupacaoControllerPDF::class, 'index']); 
+
         
     Route::get('pdf', [TerrestreControllerPDF::class, 'generatePDF']); 
     Route::get('aereoPdf', [aerioControllerPDF::class, 'generatePDF']); 
