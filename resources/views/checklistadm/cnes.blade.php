@@ -15,21 +15,16 @@ use App\Http\Controllers\TaxaController;
 </head>
 <body>
 
-
 <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="http://www.cerintersc.com.br" class="brand-logo">CerinterSC</a>
       <ul class="right hide-on-med-and-down">
     
         <li><a href="http://www.cerintersc.com.br">Inicio</a></li>   
      
-      </ul>
-      <ul id="nav-mobile" class="sidenav">
-      <li><a href="http://www.cerintersc.com.br">Inicio</a></li>   
-      </ul>
+
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-
 
 
 <div class="container">
@@ -46,312 +41,189 @@ use App\Http\Controllers\TaxaController;
 </ul>
 </div>
 
-    <h1 class="header center orange-text">Cnes</h1>
+
+      <h1 class="header center orange-text">Ocupação de Leitos</h1>
       <div class="row center">
-        <h5 class="header col s12 light"> Cnes</p></h5>
+        <h5 class="header col s12 light"> Covid e não Covid<p> UTI e Enfermaria</p></h5>
 
       </div>
 
       <br><br>
     </div>
   </div>
-  
+
+
+
+<!-- ASSOCIACAO BENEFICENTE HOSPITALAR SAO CAMILO PERITIBA  -->  
+<div class="container">
+<ul class="collapsible">
+  <li>
+    <div class="collapsible-header">
+      <i class="material-icons">airline_seat_individual_suite
+</i>
+      ASSOCIACAO BENEFICENTE HOSPITALAR SAO CAMILO PERITIBA
+      <span class="new badge"></span></div>
+    <div class="collapsible-body">
+   
+    <?php
+        $hg = file_get_contents("https://apidadosabertos.saude.gov.br/cnes/estabelecimentos/2689863");
+       /* echo $hg; */
+        $hosp=(explode(',',$hg)); 
+        for ($x = 0; $x <= 36; $x++) {
+         echo $hosp[$x];
+         echo "<br>";
+       }
+    ?>
+  </div>
+  </li>
+
+
+
+<!-- ASSOCIACAO BENEFICENTE HOSPITAL SAO LUCAS  -->  
+  <li>
+    <div class="collapsible-header">
+      <i class="material-icons">airline_seat_individual_suite
+</i>
+      ASSOCIACAO BENEFICENTE HOSPITAL SAO LUCAS
+      <span class="new badge"></span></div>
+    <div class="collapsible-body">
+   
+    <?php
+        $hg = file_get_contents("https://apidadosabertos.saude.gov.br/cnes/estabelecimentos/2378116");
+       /* echo $hg; */
+        $hosp=(explode(',',$hg)); 
+        for ($x = 0; $x <= 36; $x++) {
+         echo $hosp[$x];
+         echo "<br>";
+       }
+    ?>
+  </div>
+  </li>
+
 
  
-  <!--  ACeni -->
-<div class="container">
-<ul class="collapsible">
+
+<!-- ASSOCIACAO HOSPITALAR ANGELINA MENEGHELLI  -->  
   <li>
     <div class="collapsible-header">
-      <i class="material-icons">local_hospital</i>
-      Aceni / 7274351
+      <i class="material-icons">airline_seat_individual_suite
+</i>
+      ASSOCIACAO HOSPITALAR ANGELINA MENEGHELLI
       <span class="new badge"></span></div>
     <div class="collapsible-body">
-   <?php
-$curlHandler = curl_init();
-$token = '';
-curl_setopt_array($curlHandler, [
-    CURLOPT_URL => 'https://apidadosabertos.saude.gov.br/cnes/estabelecimentos/7274351',
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_HTTPHEADER => [
-        'Accept: application/json',
-        'Authorization: Bearer ' . $token
-    ],
-]);
-$response = curl_exec($curlHandler);
-curl_close($curlHandler);
-/*
-print_r($response);
-*/
-$hosp=(explode(',', $response)); 
-?>
-
-              
-<?php
-for ($x = 0; $x <= 36; $x++) {
-  echo $hosp[$x];
-  echo "</br>"; 
-}
-?>
-
-
+   
+    <?php
+        $hg = file_get_contents("https://apidadosabertos.saude.gov.br/cnes/estabelecimentos/2377659");
+       /* echo $hg; */
+        $hosp=(explode(',',$hg)); 
+        for ($x = 0; $x <= 36; $x++) {
+         echo $hosp[$x];
+         echo "<br>";
+       }
+    ?>
   </div>
   </li>
-</ul>
-</div>
-</div>
-
-<!-- Encerra o bloco de comando -->
 
 
 
 
 
+ 
 
-
-
-
-
-<!--  ASSOCIACAO BENEFICENTE HOSPITALAR SAO CAMILO PERITIBA -->
-<div class="container">
-<ul class="collapsible">
-  <li>
+<!-- ACENI -->  
+<li>
     <div class="collapsible-header">
-      <i class="material-icons">local_hospital</i>
-      ASSOCIACAO BENEFICENTE HOSPITALAR SAO CAMILO PERITIBA / 2689863
+      <i class="material-icons">airline_seat_individual_suite
+</i>
+      ACENI
       <span class="new badge"></span></div>
     <div class="collapsible-body">
-   <?php
-$curlHandler = curl_init();
-$token = '';
-curl_setopt_array($curlHandler, [
-    CURLOPT_URL => 'https://apidadosabertos.saude.gov.br/cnes/estabelecimentos/2689863',
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_HTTPHEADER => [
-        'Accept: application/json',
-        'Authorization: Bearer ' . $token
-    ],
-]);
-$response = curl_exec($curlHandler);
-curl_close($curlHandler);
-/*
-print_r($response);
-*/
-$hosp=(explode(',', $response)); 
-?>
-
-              
-<?php
-for ($x = 0; $x <= 36; $x++) {
-  echo $hosp[$x];
-  echo "</br>"; 
-}
-?>
-
-
+   
+    <?php
+        $hg = file_get_contents("https://apidadosabertos.saude.gov.br/cnes/estabelecimentos/7274351");
+       /* echo $hg; */
+        $hosp=(explode(',',$hg)); 
+        for ($x = 0; $x <= 36; $x++) {
+         echo $hosp[$x];
+         echo "<br>";
+       }
+    ?>
   </div>
   </li>
-</ul>
-</div>
-</div>
-
-<!-- Encerra o bloco de comando -->
 
 
 
 
-  <!--  ASSOCIACAO BENEFICENTE HOSPITAL SAO LUCAS -->
-  <div class="container">
-<ul class="collapsible">
-  <li>
+
+
+<!-- ASSOCIACAO HOSPITALAR DE VARGEAO -->  
+<li>
     <div class="collapsible-header">
-      <i class="material-icons">local_hospital</i>
-      ASSOCIACAO BENEFICENTE HOSPITAL SAO LUCAS / 2378116
+      <i class="material-icons">airline_seat_individual_suite
+</i>
+      ASSOCIACAO HOSPITALAR DE VARGEAO
       <span class="new badge"></span></div>
     <div class="collapsible-body">
-   <?php
-$curlHandler = curl_init();
-$token = '';
-curl_setopt_array($curlHandler, [
-    CURLOPT_URL => 'https://apidadosabertos.saude.gov.br/cnes/estabelecimentos/2378116',
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_HTTPHEADER => [
-        'Accept: application/json',
-        'Authorization: Bearer ' . $token
-    ],
-]);
-$response = curl_exec($curlHandler);
-curl_close($curlHandler);
-/*
-print_r($response);
-*/
-$hosp=(explode(',', $response)); 
-?>
-
-              
-<?php
-for ($x = 0; $x <= 36; $x++) {
-  echo $hosp[$x];
-  echo "</br>"; 
-}
-?>
-
-
+   
+    <?php
+        $hg = file_get_contents("https://apidadosabertos.saude.gov.br/cnes/estabelecimentos/2411245");
+       /* echo $hg; */
+        $hosp=(explode(',',$hg)); 
+        for ($x = 0; $x <= 36; $x++) {
+         echo $hosp[$x];
+         echo "<br>";
+       }
+    ?>
   </div>
   </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 </div>
-</div>
-
-<!-- Encerra o bloco de comando -->
 
 
-
- <!-- ASSOCIACAO HOSPITALAR ANGELINA MENEGHELLI -->
- <div class="container">
-<ul class="collapsible">
-  <li>
-    <div class="collapsible-header">
-      <i class="material-icons">local_hospital</i>
-      ASSOCIACAO HOSPITALAR ANGELINA MENEGHELLI / 2378116
-      <span class="new badge"></span></div>
-    <div class="collapsible-body">
-   <?php
-$curlHandler = curl_init();
-$token = '';
-curl_setopt_array($curlHandler, [
-    CURLOPT_URL => 'https://apidadosabertos.saude.gov.br/cnes/estabelecimentos/2378116',
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_HTTPHEADER => [
-        'Accept: application/json',
-        'Authorization: Bearer ' . $token
-    ],
-]);
-$response = curl_exec($curlHandler);
-curl_close($curlHandler);
-/*
-print_r($response);
-*/
-$hosp=(explode(',', $response)); 
-?>
-
-              
-<?php
-for ($x = 0; $x <= 36; $x++) {
-  echo $hosp[$x];
-  echo "</br>"; 
-}
-?>
-
-
-  </div>
-  </li>
-</ul>
-</div>
-</div>
-
-<!-- Encerra o bloco de comando -->
-
-
-
-
-
-
- <!--ASSOCIACAO HOSPITALAR DE VARGEAO -->
- <div class="container">
-<ul class="collapsible">
-  <li>
-    <div class="collapsible-header">
-      <i class="material-icons">local_hospital</i>
-      ASSOCIACAO HOSPITALAR DE VARGEAO / 2411245
-      <span class="new badge"></span></div>
-    <div class="collapsible-body">
-   <?php
-$curlHandler = curl_init();
-$token = '';
-curl_setopt_array($curlHandler, [
-    CURLOPT_URL => 'https://apidadosabertos.saude.gov.br/cnes/estabelecimentos/2411245',
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_HTTPHEADER => [
-        'Accept: application/json',
-        'Authorization: Bearer ' . $token
-    ],
-]);
-$response = curl_exec($curlHandler);
-curl_close($curlHandler);
-/*
-print_r($response);
-*/
-$hosp=(explode(',', $response)); 
-?>
-
-              
-<?php
-for ($x = 0; $x <= 36; $x++) {
-  echo $hosp[$x];
-  echo "</br>"; 
-}
-?>
-
-
-  </div>
-  </li>
-</ul>
-</div>
-</div>
-
-<!-- Encerra o bloco de comando -->
-
-
-
-
- <!--ASSOCIACAO HOSPITALAR PE JOAO BERTHIER -->
- <div class="container">
-<ul class="collapsible">
-  <li>
-    <div class="collapsible-header">
-      <i class="material-icons">local_hospital</i>
-      ASSOCIACAO HOSPITALAR PE JOAO BERTHIER / 2538571
-      <span class="new badge"></span></div>
-    <div class="collapsible-body">
-   <?php
-$curlHandler = curl_init();
-$token = '';
-curl_setopt_array($curlHandler, [
-    CURLOPT_URL => 'https://apidadosabertos.saude.gov.br/cnes/estabelecimentos/2411245',
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_HTTPHEADER => [
-        'Accept: application/json',
-        'Authorization: Bearer ' . $token
-    ],
-]);
-$response = curl_exec($curlHandler);
-curl_close($curlHandler);
-/*
-print_r($response);
-*/
-$hosp=(explode(',', $response)); 
-?>
-
-              
-<?php
-for ($x = 0; $x <= 36; $x++) {
-  echo $hosp[$x];
-  echo "</br>"; 
-}
-?>
-
-
-
-
-
-  </div>
-  </li>
-</ul>
-</div>
-</div>
-
-<!-- Encerra o bloco de comando -->
 
 
 
@@ -383,6 +255,3 @@ for ($x = 0; $x <= 36; $x++) {
 
 
 @endsection
-
-
-

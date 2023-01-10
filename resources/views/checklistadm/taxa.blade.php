@@ -60,7 +60,7 @@ use App\Http\Controllers\TaxaController;
 
 <?php
 $curlHandler = curl_init();
-$token = '';
+$token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbmRyZWdkczg1QGdtYWlsLmNvbSIsImlzcyI6Im1lZHN1aXRlLWxlaXRvcyIsImlhdCI6MTY3MTUwMzQxNH0.6d2tNlR8sG7zJoHIRNjqALOcM02GZaNskicKlkgM4jE';
 curl_setopt_array($curlHandler, [
     CURLOPT_URL => 'http://api-leitos.saude.sc.gov.br:3000/csv/taxaOcupacao',
     CURLOPT_RETURNTRANSFER => true,
